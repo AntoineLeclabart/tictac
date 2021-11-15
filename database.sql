@@ -22,42 +22,18 @@ SET time_zone = "+00:00";
 
 -- --------------------------------------------------------
 
---
--- Structure de la table `item`
---
+CREATE DATABASE biznutz;
 
-CREATE TABLE `item` (
-  `id` int(11) UNSIGNED NOT NULL,
-  `title` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+USE biznutz;
 
---
--- Contenu de la table `item`
---
+CREATE TABLE nut 
+(
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(64) NOT NULL,
+  stock INT NOT NULL DEFAULT 0
+);
 
-INSERT INTO `item` (`id`, `title`) VALUES
-(1, 'Stuff'),
-(2, 'Doodads');
-
---
--- Index pour les tables exportées
---
-
---
--- Index pour la table `item`
---
-ALTER TABLE `item`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT pour les tables exportées
---
-
---
--- AUTO_INCREMENT pour la table `item`
---
-ALTER TABLE `item`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+INSERT INTO nut (name, stock) VALUES [
+  ('Chestnut', 60),
+  ('DeezNuts', 90)
+  ]
